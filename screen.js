@@ -496,3 +496,38 @@
 
   init();
 })();
+function initUploadQRCode() {
+  const qrBox = document.getElementById("qrcode");
+  const uploadUrlText = document.getElementById("uploadUrlText");
+
+  if (!qrBox) return;
+
+  const uploadUrl = `${window.location.origin}/`;
+
+  const qrImgUrl =
+    "https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=12&data=" +
+    encodeURIComponent(uploadUrl);
+
+  qrBox.innerHTML = `
+    <img 
+      src="${qrImgUrl}" 
+      alt="扫码上传毕业照片"
+      style="
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 12px;
+        background: #fff;
+        padding: 8px;
+        box-sizing: border-box;
+      "
+    />
+  `;
+
+  if (uploadUrlText) {
+    uploadUrlText.textContent = uploadUrl;
+  }
+}
+
+initUploadQRCode();
+
