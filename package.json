@@ -1,0 +1,9 @@
+{
+  "name": "graduation-memory-wall-supabase",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Pure HTML/CSS/JS graduation photo sphere wall using Supabase Storage + Realtime and Vercel static deployment.",
+  "scripts": {
+    "dev": "python -m http.server 8080"
+  }
+}

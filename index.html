@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>毕业照片上传｜毕业留痕，以物换忆</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="upload-body">
+  <main class="upload-shell">
+    <section class="upload-card" id="uploadCard">
+      <div class="upload-brand">
+        <div class="brand-orbit"></div>
+        <div>
+          <p class="eyebrow" id="collegeName">长沙理工大学交通学院硕士毕业纪念互动墙</p>
+          <h1 id="uploadTitle">点亮我的毕业星球</h1>
+          <p id="uploadSubtitle">上传一张毕业照片，让它飞入大屏的 3D 研途星球</p>
+        </div>
+      </div>
+
+      <form id="uploadForm" class="upload-form">
+        <label class="photo-picker" for="photoInput" id="photoPicker">
+          <input id="photoInput" name="photo" type="file" accept="image/*" required />
+          <div class="picker-preview" id="pickerPreview">
+            <span class="picker-plus">+</span>
+            <span class="picker-text">选择毕业照片</span>
+          </div>
+        </label>
+
+        <label class="field">
+          <span>姓名 / 昵称</span>
+          <input id="nameInput" name="name" maxlength="18" placeholder="例如：李同学" autocomplete="name" />
+        </label>
+
+        <label class="field">
+          <span>毕业寄语，可不填</span>
+          <textarea id="messageInput" name="message" maxlength="60" placeholder="例如：研途有光，一路生花"></textarea>
+        </label>
+
+        <button id="submitBtn" class="primary-btn" type="submit">
+          <span>上传并点亮大屏</span>
+        </button>
+
+        <p class="upload-note">
+          上传成功后，请抬头看大屏。你的照片会被隆重展示 5 秒，然后飞入 3D 研途星球。
+        </p>
+
+        <div class="progress-box" id="progressBox" hidden>
+          <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+          <p id="progressText">正在上传...</p>
+        </div>
+
+        <div class="error-box" id="errorBox" hidden></div>
+      </form>
+    </section>
+
+    <section class="success-ceremony" id="successCeremony" hidden>
+      <div class="success-particles" id="successParticles"></div>
+      <div class="mini-planet">
+        <div class="mini-ring ring-a"></div>
+        <div class="mini-ring ring-b"></div>
+        <img id="successPhoto" alt="已上传的毕业照片" />
+      </div>
+      <p class="eyebrow">上传成功</p>
+      <h2>你的毕业瞬间已点亮</h2>
+      <h3 id="successTheme">毕业留痕，以物换忆</h3>
+      <p id="successText">照片已送达大屏，正在进入 3D 研途星球。请抬头看大屏，等待你的高光时刻。</p>
+      <button class="ghost-btn" id="uploadAnotherBtn">再上传一张</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./js/upload.js"></script>
+</body>
+</html>

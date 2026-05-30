@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>大屏展示｜毕业留痕，以物换忆</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="screen-body">
+  <div class="screen-bg">
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="grid-floor"></div>
+    <div class="road-lines"></div>
+    <div class="stars"></div>
+  </div>
+
+  <header class="screen-header">
+    <div class="theme-badge">
+      <div class="badge-dot"></div>
+      <div>
+        <h1 id="screenTitle">毕业留痕，以物换忆</h1>
+        <p id="screenSubtitle">长沙理工大学交通学院硕士毕业纪念互动墙</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="screen-main">
+    <section class="sphere-stage" id="sphereStage">
+      <div class="sphere-halo halo-one"></div>
+      <div class="sphere-halo halo-two"></div>
+      <div class="photo-sphere-wrap" id="sphereWrap">
+        <div class="photo-sphere" id="photoSphere"></div>
+      </div>
+      <div class="sphere-core">
+        <span>CSUST</span>
+        <small>TRAFFIC</small>
+      </div>
+    </section>
+
+    <aside class="record-panel" id="recordPanel">
+      <div class="record-head">
+        <div>
+          <p>实时上墙记录</p>
+          <strong id="totalCount">0</strong>
+        </div>
+        <span>LIVE</span>
+      </div>
+      <div class="record-list" id="recordList">
+        <div class="empty-record">等待第一位毕业生点亮星球</div>
+      </div>
+    </aside>
+
+    <section class="qr-panel" id="qrPanel">
+      <div id="qrcode" class="qrcode"></div>
+      <p>扫码上传毕业照片</p>
+      <span id="uploadUrlText"></span>
+    </section>
+
+    <section class="control-panel">
+      <button id="toggleRecordsBtn">隐藏记录</button>
+      <button id="toggleQrBtn">隐藏二维码</button>
+      <button id="toggleRotateBtn">暂停旋转</button>
+      <button id="slowerBtn">减速</button>
+      <button id="fasterBtn">加速</button>
+      <button id="focusLatestBtn">聚焦最新</button>
+      <button id="fullscreenBtn">全屏</button>
+    </section>
+  </main>
+
+  <section class="ceremony-overlay" id="ceremonyOverlay" hidden>
+    <div class="ceremony-glow"></div>
+    <div class="ceremony-card">
+      <img id="ceremonyPhoto" alt="新上传的毕业照片" />
+      <div class="ceremony-copy">
+        <p id="ceremonyName">新的毕业瞬间已点亮</p>
+        <h2 id="ceremonyBlessing">毕业快乐，前程似锦</h2>
+        <span id="ceremonyMessage">从长理出发，向星辰大海</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="connection-status" id="connectionStatus">正在连接 Supabase...</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="./config.js"></script>
+  <script src="./js/screen.js"></script>
+</body>
+</html>
