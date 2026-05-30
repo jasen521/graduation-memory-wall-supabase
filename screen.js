@@ -505,8 +505,8 @@ function initUploadQRCode() {
   const uploadUrl = `${window.location.origin}/`;
 
   const qrImgUrl =
-    "https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=12&data=" +
-    encodeURIComponent(uploadUrl);
+  "https://quickchart.io/qr?size=220&margin=2&text=" +
+  encodeURIComponent(uploadUrl);
 
   qrBox.innerHTML = `
     <img 
