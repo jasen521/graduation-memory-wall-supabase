@@ -25,7 +25,7 @@ window.GRADUATION_CONFIG = {
   maxRecords: 18,
 
   // 上传限制
-  maxFileSizeMB: 10,
+  maxFileSizeMB: 20,
   allowedImageTypes: ["image/jpeg", "image/png", "image/webp", "image/gif"],
 
   // 大屏二维码默认指向当前域名根路径，也就是 index.html 上传页
